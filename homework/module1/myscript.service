@@ -1,0 +1,13 @@
+[Unit]
+Description=My custom script that writes date every second
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/home/shweex/myscript.sh
+Restart=always
+RestartSec=3
+User=shweex
+
+[Install]
+WantedBy=multi-user.target
